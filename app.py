@@ -68,7 +68,7 @@ def tamil_world():
     return render_template('tm-world.html', data=feed_data)
 
 
-@app.route('/tamil/tech')
+@app.route('/tech')
 def tamil_tech():
     # rss_urls = ['https://feeds.feedburner.com/Hindu_Tamil_technology.xml']
     rss_urls = ['https://rss.app/feeds/_ZeQaG5gCo2OeTdZi.xml']
