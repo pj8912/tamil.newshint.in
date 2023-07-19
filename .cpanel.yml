@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/tamil.newshint.in/
+    - export DEPLOYPATH=/home/rnwjvrilauvg/public_html/
