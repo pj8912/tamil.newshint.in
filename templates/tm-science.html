@@ -1,0 +1,8 @@
+{% extends 'wrapper.html' %}
+{% block title %}Science{% endblock %}
+{% block content %}
+<h2>அறிவியல்</h2>
+    {% for news in data %}
+        {% include "news-card-tm.html" %}
+    {% endfor %}
+{% endblock %}

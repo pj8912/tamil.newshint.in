@@ -1,0 +1,8 @@
+{% extends 'wrapper.html' %}
+{% block title %}Cinema{% endblock %}
+{% block content %}
+<h2>பொழுதுபோக்கு</h2>
+    {% for news in data %}
+        {% include "news-card-tm.html" %}
+    {% endfor %}
+{% endblock %}

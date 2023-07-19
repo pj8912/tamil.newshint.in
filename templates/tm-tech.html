@@ -1,0 +1,8 @@
+{% extends 'wrapper.html' %}
+{% block title %}Business{% endblock %}
+{% block content %}
+<h2>தொழில்நுட்பம்</h2>
+    {% for news in data %}
+        {% include "news-card-tm.html" %}
+    {% endfor %}
+{% endblock %}

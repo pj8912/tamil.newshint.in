@@ -1,0 +1,9 @@
+{% extends 'wrapper.html' %}
+{% block title %}Tamil{% endblock %}
+{% block rellink %}tamil{% endblock %}
+{% block content %}
+<h2>இந்தியா</h2>
+    {% for news in data %}
+        {% include "news-card-tm.html" %}
+    {% endfor %}
+{% endblock %}

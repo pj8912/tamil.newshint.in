@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TamilNewsHint/{% block title %}{% endblock %}</title>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=6.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="A personalized news aggregator">
+    <meta name="description" content="NewsHint is a personalized news aggregator. We deliver verified facts as instant news and present exciting news
+    articles and stories through out website.">
+
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//www.gstatic.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//static.zdassets.com">
+    <link rel="dns-prefetch" href="//s7.addthis.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="dns-prefetch" href="//graph.facebook.com">
+
+    <meta property="og:image" content="{{url_for('static', filename='twitter_logo.png')}}">
+    <meta property="og:title" content="NewsHint">
+    <meta name="og:description" content="NewsHint is a personalized news aggregator. We deliver verified facts as instant news and present exciting news
+    articles and stories through out website.">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *;
+   img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+   style-src  'self' 'unsafe-inline' *">
+
+    <link rel="canonical" href="https://newshint.in/{% block rellink %}{%endblock%}" />
+    <link rel="apple-touch-icon" href="promo/icon512.png">
+    <link rel="icon" sizes="512x512" href="promo/icon512.png">
+    <!-- <link rel="image_src" type="image/png" href="promo/icon512.png" /> -->
+
+    <meta name="twitter:title" content="NewsHint">
+    <meta name="twitter:image" content="{{url_for('static', filename='twitter_logo.png')}}">
+    <meta name="twitter:description" content="NewsHint is a personalized news aggregator. We deliver verified facts as instant news and present exciting news
+    articles and stories through out website.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" sizes="512x512" href="{{url_for('static', filename='twitter_logo_r.png')}}" type="image/png">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" id="dynamic-css">
+
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans Tamil' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans Tamil Supplement' rel='stylesheet'>
+
+    <meta name="google" content="notranslate">
+
+    <script src="https://kit.fontawesome.com/d191a98b5d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% include 'nav.html' %}
+    <div id="loader">
+        <!-- Your loader content here -->
+        Loading...
+    </div>
+    <div class="wrapper">
+        <main role="main" class="container">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Back to top</button>
+    <script src="{{url_for('static', filename='page.js')}}"></script>
+    <script>
+        var cssLink = document.createElement("link");
+        cssLink.href = "{{url_for('static', filename='style.css')}}";
+        cssLink.rel = "stylesheet";
+        cssLink.type = "text/css";
+
+        // Find the existing CSS link element
+        var existingCssLink = document.getElementById("dynamic-css");
+
+        // Replace the existing CSS link element with the new one
+        existingCssLink.parentNode.replaceChild(cssLink, existingCssLink);
+    </script>
+</body>
+
+</html>
