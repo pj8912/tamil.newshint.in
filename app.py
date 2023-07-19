@@ -6,7 +6,6 @@ from combined import *
 from tamil_test import * 
 from tm_live_updates import *
 # from flask_sitemapper import Sitemapper
-from dynamic_sitemap import SimpleSitemap, ChangeFreq
 from datetime import datetime
 from urllib.parse import urlparse
 import pytz
